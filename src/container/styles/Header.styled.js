@@ -29,6 +29,9 @@ export const HeaderLeft = styled.div`
     font-size: clamp(1.5rem, 2vw, 2rem);
     line-height: 45px;
     margin-bottom: 1rem;
+    @media screen and (max-width: 400px) {
+      font-size: 1.2rem;
+    }
   }
 
   p {

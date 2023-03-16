@@ -15,7 +15,7 @@ export const ServiceTitle = styled(SectionTitle)`
   text-transform: capitalize;
   font-size: 1rem;
   position: absolute;
-  top: 5%;
+  top: 2%;
 
   &::after {
     width: 36px;

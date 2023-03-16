@@ -23,7 +23,9 @@ export const SectionTitle = styled.h3`
   transform: translate(-50%, -50%);
   left: 50%;
   top: 12%;
-
+  @media screen and (max-width: 400px) {
+    font-size: 1rem;
+  }
   &::after {
     content: "";
     position: absolute;

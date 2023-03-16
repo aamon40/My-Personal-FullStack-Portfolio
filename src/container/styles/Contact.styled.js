@@ -29,7 +29,7 @@ export const ContactImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 350px; /* max-height: 200px; */
+  max-width: 280px; /* max-height: 200px; */
   border-radius: 0 360px 360px 0;
   background-color: #000;
   z-index: 5;
@@ -44,7 +44,7 @@ export const ContactImage = styled.div`
     );
   }
   img {
-    max-width: 350px;
+    max-width: 280px;
     object-fit: cover;
   }
 `;
@@ -70,7 +70,7 @@ export const StyledForm = styled.div`
     backdrop-filter: blur(5px);
     border-radius: 240px 240px 0px 240px;
     padding: 36px 30px 54px;
-    width: 300px;
+    width: 280px;
 
     /* @media screen and (max-width: 550px) {
       /* width: 150px;

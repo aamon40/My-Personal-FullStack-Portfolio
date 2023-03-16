@@ -6,7 +6,7 @@ import { ServiceTitle } from "./Services";
 
 const ToolsTitle = styled(ServiceTitle)`
   color: #fff;
-  top: 12%;
+  top: 6%;
   font-size: 1rem;
   font-weight: 500;
   &::after {
