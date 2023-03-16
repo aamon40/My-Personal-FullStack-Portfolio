@@ -7,10 +7,6 @@ import styled from "styled-components";
 
 const StyledFooterSocials = styled.ul`
   display: flex;
-  /* flex-direction: column; */
-  /* position: fixed; */
-  /* left: 2%;
-  bottom: 10%; */
   z-index: 10;
 
   li {
