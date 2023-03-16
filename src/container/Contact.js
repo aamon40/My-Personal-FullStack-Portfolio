@@ -27,15 +27,11 @@ const Contact = () => {
 
   return (
     <StyledContact id="contact">
-      <Container>
+      <Container style={{ padding: "0.5 2rem" }}>
         <SectionTitle style={{ color: "#fff", top: "50px" }}>
           Contact Me
         </SectionTitle>
         <ContactContent>
-          <ContactImage>
-            <img src={images.contact} alt="contact-photo" />
-          </ContactImage>
-
           <StyledForm>
             <form
               target="_blank"
@@ -91,6 +87,9 @@ const Contact = () => {
               </button>
             </form>
           </StyledForm>
+          <ContactImage>
+            <img src={images.contactmobile} alt="contact-photo" />
+          </ContactImage>
         </ContactContent>
       </Container>
     </StyledContact>

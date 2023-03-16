@@ -16,24 +16,25 @@ export const StyledContact = styled.section`
 
 export const ContactContent = styled.div`
   display: flex;
+  align-items: center;
   position: relative;
+  margin: 4rem 0;
+  gap: 4rem;
 
-  @media screen and (max-width: 550px) {
-    flex-direction: column-reverse;
+  @media screen and (max-width: 680px) {
+    flex-direction: column;
   }
 `;
 export const ContactImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
-  max-height: 400px;
-  border-radius: 360px;
+  max-width: 230px; /* max-height: 200px; */
+  border-radius: 0 360px 360px 0;
   background-color: #000;
   z-index: 5;
   overflow: hidden;
   position: relative;
-  margin: 4rem 0;
 
   span {
     background: linear-gradient(
@@ -43,46 +44,44 @@ export const ContactImage = styled.div`
     );
   }
   img {
-    max-width: 800px;
+    max-width: 230px;
     object-fit: cover;
   }
 `;
 
 export const StyledForm = styled.div`
-  display: flex;
-  flex-basis: 1/4;
-  position: absolute;
-
+  /* display: flex; */
+  /* position: absolute;
   top: 15%;
-  left: 10%;
-  z-index: 10;
-
+  left: 10%; */
+  /* z-index: 10; */
+  /* 
   @media screen and (max-width: 550px) {
     position: static;
     justify-content: center;
-  }
+  } */
   form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    width: 80%;
     height: fit-content;
     background: rgba(0, 0, 0, 0.7);
     border: 2px solid rgba(151, 71, 255, 0.5);
     backdrop-filter: blur(5px);
     border-radius: 240px 240px 0px 240px;
-    padding: 80px 40px 72px 40px;
-    width: 60%;
+    padding: 36px 30px 54px;
+    width: 224px;
 
-    @media screen and (max-width: 550px) {
-      width: 40%;
-      margin-top: 100px;
-    }
+    /* @media screen and (max-width: 550px) {
+      /* width: 150px;
+      margin-top: 100px; */
+
     span {
       color: var(--light-purple);
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-size: 0.8rem;
     }
 
     input,
@@ -94,6 +93,7 @@ export const StyledForm = styled.div`
       color: #fff;
       font-family: "Montserrat";
       padding: 0.5rem 1rem;
+      font-size: 0.8rem;
       /* width: 50%; */
     }
 

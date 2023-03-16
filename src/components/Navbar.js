@@ -15,6 +15,9 @@ const Wrapper = styled.nav`
   @media screen and (max-width: 600px) {
     padding: 0.5rem 1rem;
   }
+  @media screen and (max-width: 400px) {
+    padding: 0.3rem 0.5rem;
+  }
 `;
 
 const Logo = styled.div``;
@@ -22,6 +25,10 @@ const Logo = styled.div``;
 const Image = styled(motion.img)`
   cursor: pointer;
   width: 4rem;
+
+  @media screen and (max-width: 400px) {
+    width: 2.5rem;
+  }
 `;
 
 const NavLeft = styled.div`

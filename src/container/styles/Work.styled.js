@@ -56,6 +56,11 @@ export const ProjectImage = styled.div`
       max-width: 360px;
     }
   }
+  @media screen and (max-width: 400px) {
+    img {
+      max-width: 300px;
+    }
+  }
 `;
 
 export const ProjectDetails = styled.div`
@@ -73,7 +78,7 @@ export const ProjectDetails = styled.div`
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
-    text-align: justify;
+    text-align: center;
     margin-bottom: 1.5rem;
   }
 `;

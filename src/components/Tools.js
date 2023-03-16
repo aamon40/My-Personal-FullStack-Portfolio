@@ -30,10 +30,10 @@ const ToolGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: repeat(3, 1fr); */
-  grid-column-gap: 64px;
+  grid-column-gap: 48px;
   grid-row-gap: 48px;
   justify-items: center;
-  padding: 5rem 5rem;
+  padding: 5rem 0;
 
   @media screen and (max-width: 400px) {
     grid-template-columns: repeat(3, 1fr);

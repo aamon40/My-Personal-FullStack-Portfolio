@@ -3,8 +3,8 @@ import { images } from "../../constants";
 import { motion } from "framer-motion";
 
 export const StyledAbout = styled.section`
-  height: 100vh;
-  height: 100svh;
+  /* height: 100vh;
+  height: 100svh; */
   /* background-image: url(${images.aboutbg});
   background-position: cover;
   background-size: cover;
@@ -42,12 +42,12 @@ export const AboutContent = styled.div`
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  height: 100svh;
+  /* height: 100vh;
+  height: 100svh; */
   margin-top: 2.5rem;
 
   @media screen and (max-width: 400px) {
-    margin-top: 4.5rem;
+    margin: 7.5rem 0 4rem;
   }
 
   p {
