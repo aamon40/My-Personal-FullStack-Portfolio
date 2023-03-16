@@ -19,12 +19,12 @@ const LinkDot = styled.ul`
   border-radius: 80px;
   backdrop-filter: blur(15px);
 
-  @media screen and (max-width: 780px) {
+  /* @media screen and (max-width: 780px) {
     flex-direction: row;
     left: 50%;
     right: 0;
     transform: translate(-50%, -50%);
-  }
+  } */
 
   li {
     margin-bottom: 1rem;
