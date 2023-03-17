@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&?family=Anonymous+Pro:ital@0;1&family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&?family=Anonymous+Pro:ital@0;1&family=Montserrat:wght@100;300;400;500;600;700;800&display=swap'); */
 
 
 * {
@@ -45,13 +45,12 @@ const GlobalStyles = createGlobalStyle`
     --dark: #110e18;
     --light-purple: #9747ff;
     --yellow: #f3d27b;
-
+    
 }
 
 body {
     background: #e7ecef;
     font-family: 'Montserrat', sans-serif;
-
 
 }
 

@@ -89,7 +89,7 @@ const NavDots = () => {
         {NavItems.map((item, index) => (
           <li>
             <a
-              key={item + index}
+              key={`item-${index}`}
               href={`#${item.name}`}
               onClick={() => setActiveNav(`#${item.name}`)}
               className={activeNav === `#${item.name}` ? "active" : ""}
