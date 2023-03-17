@@ -4,54 +4,73 @@ import { FiGithub } from "react-icons/fi";
 import { AiOutlineLeft } from "react-icons/ai";
 import { AiOutlineRight } from "react-icons/ai";
 
-import { Container } from "./styles/Container.styled";
-import { SectionTitle } from "./styles/About.styled";
 import {
   Navigate,
-  ProjectContainerCard,
+  ProjectCard,
+  ProjectContainer,
   ProjectDetails,
   ProjectImage,
   ProjectLinks,
-  StyledWork,
 } from "./styles/Work.styled";
 import { images } from "../constants";
 
+const Project = [
+  {
+    img: `${images.screens}`,
+    title: "WonderFit Website",
+    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
+    demolink: "https://achojanyore.netlify.app/",
+    gitlink:
+      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
+  },
+
+  {
+    img: `${images.screens}`,
+    title: "WonderFit Website",
+    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
+    demolink: "https://achojanyore.netlify.app/",
+    gitlink:
+      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
+  },
+  {
+    img: `${images.screens}`,
+    title: "WonderFit Website",
+    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
+    demolink: "https://achojanyore.netlify.app/",
+    gitlink:
+      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
+  },
+];
+
 const Work = () => {
   return (
-    <StyledWork id="work">
-      <Container>
-        <SectionTitle style={{ color: "var(--bluish-purple)", top: "3rem" }}>
-          My Projects
-        </SectionTitle>
-        <ProjectContainerCard>
+    <ProjectContainer>
+      {Project.map((item, index) => (
+        <ProjectCard key={`project-${index}`}>
           <ProjectImage>
-            <img src={images.screens} alt="" />
+            <img src={item.img} alt="" />
           </ProjectImage>
-          <Navigate>
+          {/* <Navigate>
             <AiOutlineLeft />
             <AiOutlineRight />
-          </Navigate>
+          </Navigate> */}
 
           <ProjectDetails>
-            <h4>WonderFit Website</h4>
-            <p>
-              A random quote generator built in vanilla JS as part of
-              FreeCodeCamp's front-end development libraries certification.
-              lorem ipsum dolor sit amet I have a dream that one day...
-            </p>
+            <h4>{item.title}</h4>
+            <p>{item.desc}</p>
           </ProjectDetails>
 
           <ProjectLinks>
-            <a href="#">
+            <a target="_blank" rel="noreferrer" href={item.demolink}>
               <MdOutlineRocketLaunch />
             </a>
-            <a href="#">
+            <a target="_blank" rel="noreferrer" href={item.gitlink}>
               <FiGithub />
             </a>
           </ProjectLinks>
-        </ProjectContainerCard>
-      </Container>
-    </StyledWork>
+        </ProjectCard>
+      ))}
+    </ProjectContainer>
   );
 };
 

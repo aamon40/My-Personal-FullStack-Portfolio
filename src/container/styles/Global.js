@@ -11,6 +11,33 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: .7rem;
+        height: .7em;
+    }
+
+    ::-webkit-scrollbar-track {
+    background:#110e18 ;   
+    border-radius: 100vw;
+    margin-block: .2em;
+}
+
+    ::-webkit-scrollbar-thumb {
+        background: #9747ff;
+        border-radius: 100vw;
+    }
+        
+    ::-webkit-scrollbar-thumb:hover {
+        background:rgba(145, 105, 255, 0.8) ;
+    }
+
+    @supports (scrollbar-color: #9747ff  #110e18) {
+        * {
+        scrollbar-color: #9747ff, #110e18;
+        scrollbar-width: auto;
+        }
+    }
 }
 
 :root {
@@ -24,6 +51,8 @@ const GlobalStyles = createGlobalStyle`
 body {
     background: #e7ecef;
     font-family: 'Montserrat', sans-serif;
+
+
 }
 
 p {

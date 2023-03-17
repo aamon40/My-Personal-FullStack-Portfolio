@@ -12,6 +12,7 @@ import Contact from "./container/Contact";
 import Socials from "./components/Socials";
 import NavDots from "./components/NavDots";
 import Footer from "./container/Footer";
+import Projects from "./container/Projects";
 
 const StyledBg = styled.div`
   background-image: url(${images.newbg});
@@ -32,7 +33,7 @@ const App = () => {
         <About />
         <Services />
         <Tools />
-        <Work />
+        <Projects />
         <Contact />
         <Footer />
       </StyledBg>

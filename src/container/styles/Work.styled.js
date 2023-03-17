@@ -6,14 +6,26 @@ export const StyledWork = styled.section`
   position: relative;
   background: #e7ecef;
 `;
-export const ProjectContainerCard = styled.div`
-  /* padding: 0 1rem;
+
+export const ProjectContainer = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 2.5rem;
+`;
+
+export const ProjectCard = styled.div`
+  padding: 0 1rem;
   transition: all 0.2s ease;
   &:hover {
     background: rgba(0, 0, 0, 0.02);
+    /* backdrop-filter: blur(2px); */
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 14px 2px;
-  } */
+  }
+  scroll-snap-align: start;
+  width: 100%;
+  flex: none;
 `;
 export const Navigate = styled.div`
   display: flex;
@@ -58,7 +70,7 @@ export const ProjectImage = styled.div`
   }
   @media screen and (max-width: 400px) {
     img {
-      max-width: 300px;
+      max-width: 280px;
     }
   }
 `;
