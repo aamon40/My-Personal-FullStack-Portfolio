@@ -97,19 +97,49 @@ const Navbar = () => {
     <>
       <Wrapper>
         <Logo>
-          <Image src={images.logo} alt="Logo" />
+          <Image
+            as={motion.img}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeIn",
+            }}
+            src={images.logo}
+            alt="Logo"
+          />
         </Logo>
 
         <NavLeft>
           <Menu>
             {["home", "about", "work"].map((item, index) => (
-              <MenuItem key={`link-${item}`}>
+              <MenuItem
+                as={motion.li}
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  type: "tween",
+                  duration: 0.4,
+                  delay: index * 0.1,
+                }}
+                key={`link-${index}`}
+              >
                 <Dot />
                 <a href={`#${item}`}>{item}</a>
               </MenuItem>
             ))}
           </Menu>
-          <Button>
+          <Button
+            as={motion.button}
+            initial={{ y: -70, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              ease: "easeInOut",
+              duration: 0.3,
+              delay: 0.5,
+            }}
+          >
             {" "}
             <a href="#contact" style={{ color: "var(--yellow)" }}>
               Get In Touch
