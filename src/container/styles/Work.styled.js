@@ -10,6 +10,7 @@ export const StyledWork = styled.section`
 export const ProjectContainer = styled.div`
   display: flex;
   overflow-x: scroll;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 2.5rem;
 `;
@@ -61,6 +62,10 @@ export const ProjectImage = styled.div`
   &:hover {
     filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 0px 14px 2px);
     transform: translateY(-5px);
+  }
+
+  img {
+    max-width: 720px;
   }
 
   @media screen and (max-width: 600px) {

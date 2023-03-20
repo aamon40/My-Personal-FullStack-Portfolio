@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { urlFor, client } from "../client";
+
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
-import { AiOutlineLeft } from "react-icons/ai";
-import { AiOutlineRight } from "react-icons/ai";
 
 import {
-  Navigate,
   ProjectCard,
   ProjectContainer,
   ProjectDetails,
@@ -13,58 +13,45 @@ import {
   ProjectLinks,
 } from "./styles/Work.styled";
 import { images } from "../constants";
-
-const Project = [
-  {
-    img: `${images.screens}`,
-    title: "WonderFit Website",
-    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
-    demolink: "https://achojanyore.netlify.app/",
-    gitlink:
-      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
-  },
-
-  {
-    img: `${images.screens}`,
-    title: "WonderFit Website",
-    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
-    demolink: "https://achojanyore.netlify.app/",
-    gitlink:
-      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
-  },
-  {
-    img: `${images.screens}`,
-    title: "WonderFit Website",
-    desc: "A random quote generator built in vanilla JS as part of FreeCodeCamp's front-end development libraries certification. lorem ipsum dolor sit amet I have a dream that one day...",
-    demolink: "https://achojanyore.netlify.app/",
-    gitlink:
-      "https://github.com/aamon40/My-Personal-FullStack-Portfolio/tree/master",
-  },
-];
+import { fadeInBottomVar, fadeInTopVar } from "./utils/Variants";
 
 const Work = () => {
+  const [work, setWork] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "projects"]';
+
+    client.fetch(query).then((data) => setWork(data));
+  }, []);
+
   return (
     <ProjectContainer>
-      {Project.map((item, index) => (
+      {work.map((work, index) => (
         <ProjectCard key={`project-${index}`}>
-          <ProjectImage>
-            <img src={item.img} alt="" />
+          <ProjectImage
+            as={motion.div}
+            variants={fadeInTopVar}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <img src={urlFor(work.picture)} alt="" />
           </ProjectImage>
-          {/* <Navigate>
-            <AiOutlineLeft />
-            <AiOutlineRight />
-          </Navigate> */}
 
-          <ProjectDetails>
-            <h4>{item.title}</h4>
-            <p>{item.desc}</p>
+          <ProjectDetails
+            as={motion.div}
+            variants={fadeInBottomVar}
+            initial="hidden"
+            whileInView="visible"
+          >
+            <h4>{work.title}</h4>
+            <p>{work.description}</p>
           </ProjectDetails>
 
           <ProjectLinks>
-            <a target="_blank" rel="noreferrer" href={item.demolink}>
+            <a target="_blank" rel="noreferrer" href={work.demourl}>
               <MdOutlineRocketLaunch />
             </a>
-            <a target="_blank" rel="noreferrer" href={item.gitlink}>
+            <a target="_blank" rel="noreferrer" href={work.giturl}>
               <FiGithub />
             </a>
           </ProjectLinks>

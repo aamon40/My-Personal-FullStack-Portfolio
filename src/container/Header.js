@@ -3,6 +3,9 @@ import styled from "styled-components";
 import { HeaderLeft, HeaderRight, MainContainer } from "./styles/Header.styled";
 import { Container } from "./styles/Container.styled";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
+import { fadeInLeftVar } from "./utils/Variants";
 
 import { images } from "../constants";
 
@@ -41,7 +44,12 @@ const Header = () => {
     <MainContainer id="home">
       <Navbar />
       <Container>
-        <HeaderLeft>
+        <HeaderLeft
+          as={motion.div}
+          variants={fadeInLeftVar}
+          initial="hidden"
+          whileInView="visible"
+        >
           <h1>
             Nyore <span>Achoja</span>
           </h1>
@@ -58,9 +66,9 @@ const Header = () => {
               See My Work
             </a>
           </Button>
-          <div>
+          {/* <div>
             <img src={images.rocket} alt="" />
-          </div>
+          </div> */}
         </HeaderLeft>
         <HeaderRight />
         <Banner />

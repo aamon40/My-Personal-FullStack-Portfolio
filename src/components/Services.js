@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 import { images } from "../constants";
 import { SectionTitle } from "../container/styles/About.styled";
 import { Container } from "../container/styles/Container.styled";
@@ -9,13 +10,14 @@ import {
   CardDetails,
   StyledServices,
 } from "../container/styles/Services.styled";
+import { fadeInBottomVar } from "../container/utils/Variants";
 
 export const ServiceTitle = styled(SectionTitle)`
   color: var(--bluish-purple);
   text-transform: capitalize;
   font-size: 1rem;
   position: absolute;
-  top: 2%;
+  top: 4%;
 
   &::after {
     width: 36px;
@@ -53,7 +55,12 @@ const Services = () => {
     <StyledServices>
       <Container>
         <ServiceTitle>What I Do</ServiceTitle>
-        <CardContainer>
+        <CardContainer
+          as={motion.div}
+          variants={fadeInBottomVar}
+          initial="hidden"
+          whileInView="visible"
+        >
           {ServiceContent.map((item, index) => (
             <Card key={`item-${index}`}>
               <span>

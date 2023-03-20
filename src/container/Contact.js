@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
 import { SectionTitle } from "./styles/About.styled";
 import {
@@ -10,6 +11,7 @@ import {
 } from "./styles/Contact.styled";
 import { Container } from "./styles/Container.styled";
 import { images } from "../constants";
+import { fadeInLeftVar, fadeInRightVar } from "./utils/Variants";
 
 const Contact = () => {
   const {
@@ -32,7 +34,12 @@ const Contact = () => {
           Contact Me
         </SectionTitle>
         <ContactContent>
-          <StyledForm>
+          <StyledForm
+            as={motion.div}
+            variants={fadeInLeftVar}
+            initial="hidden"
+            whileInView="visible"
+          >
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -88,7 +95,13 @@ const Contact = () => {
             </form>
           </StyledForm>
           <ContactImage>
-            <img src={images.contactmobile} alt="contact-photo" />
+            <motion.img
+              variants={fadeInRightVar}
+              initial="hidden"
+              whileInView="visible"
+              src={images.contactmobile}
+              alt="contact-photo"
+            />
           </ContactImage>
         </ContactContent>
       </Container>

@@ -1,11 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { BiBrain } from "react-icons/bi";
 import { BsGear } from "react-icons/bs";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import styled from "styled-components";
+import { fadeInBottomVar } from "../container/utils/Variants";
 
 const HeroBanner = styled.div`
+  position: relative;
   margin-top: -54px;
+  z-index: -1;
   @media screen and (max-width: 1250px) {
     margin-top: -72px;
   }
@@ -61,7 +65,12 @@ const BannerStuff = [
 
 const Banner = () => {
   return (
-    <HeroBanner>
+    <HeroBanner
+      as={motion.div}
+      variants={fadeInBottomVar}
+      initial="hidden"
+      whileInView="visible"
+    >
       <ItemContainer>
         {BannerStuff.map((item, index) => (
           <Item key={`item-${index}`}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import { images } from "../constants";
 import { Container } from "../container/styles/Container.styled";
@@ -138,7 +139,17 @@ const Tools = () => {
         <ToolsTitle>Tools i work with</ToolsTitle>
         <ToolGrid>
           {Skills.map((item, index) => (
-            <Tool key={`item+${index}`}>
+            <Tool
+              as={motion.div}
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                type: "tween",
+                duration: 0.7,
+                ease: "easeIn",
+              }}
+              key={`item+${index}`}
+            >
               <img src={item.image} alt={item.alt} />
               <span>{item.name}</span>
             </Tool>
