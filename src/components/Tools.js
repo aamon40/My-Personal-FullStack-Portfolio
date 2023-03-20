@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { images } from "../constants";
 import { Container } from "../container/styles/Container.styled";
 import { ServiceTitle } from "./Services";
+import { client, urlFor } from "../client";
 
 const ToolsTitle = styled(ServiceTitle)`
   color: #fff;
@@ -69,76 +70,86 @@ const Tool = styled.div`
   }
 `;
 
-const Skills = [
-  {
-    image: `${images.html}`,
-    name: "html",
-    alt: "html",
-  },
-  {
-    image: `${images.sass}`,
-    name: "sass",
-    alt: "sass",
-  },
-  {
-    image: `${images.javascript}`,
-    name: "javascript",
-    alt: "javascript",
-  },
-  {
-    image: `${images.react}`,
-    name: "react",
-    alt: "react",
-  },
-  {
-    image: `${images.styled}`,
-    name: "styled",
-    alt: "styled",
-  },
-  {
-    image: `${images.git}`,
-    name: "git",
-    alt: "git",
-  },
-  {
-    image: `${images.postgre}`,
-    name: "postgreSQL",
-    alt: "postgreSQL",
-  },
-  {
-    image: `${images.node}`,
-    name: "nodeJS",
-    alt: "node",
-  },
-  {
-    image: `${images.tailwind}`,
-    name: "tailwind",
-    alt: "tailwind",
-  },
-  {
-    image: `${images.figma}`,
-    name: "figma",
-    alt: "figma",
-  },
-  {
-    image: `${images.illustrator}`,
-    name: "illustrator",
-    alt: "illustrator",
-  },
-  {
-    image: `${images.photoshop}`,
-    name: "photoshop",
-    alt: "photoshop",
-  },
-];
+// const Skills = [
+//   {
+//     image: `${images.html}`,
+//     name: "html",
+//     alt: "html",
+//   },
+//   {
+//     image: `${images.sass}`,
+//     name: "sass",
+//     alt: "sass",
+//   },
+//   {
+//     image: `${images.javascript}`,
+//     name: "javascript",
+//     alt: "javascript",
+//   },
+//   {
+//     image: `${images.react}`,
+//     name: "react",
+//     alt: "react",
+//   },
+//   {
+//     image: `${images.styled}`,
+//     name: "styled",
+//     alt: "styled",
+//   },
+//   {
+//     image: `${images.git}`,
+//     name: "git",
+//     alt: "git",
+//   },
+//   {
+//     image: `${images.postgre}`,
+//     name: "postgreSQL",
+//     alt: "postgreSQL",
+//   },
+//   {
+//     image: `${images.node}`,
+//     name: "nodeJS",
+//     alt: "node",
+//   },
+//   {
+//     image: `${images.tailwind}`,
+//     name: "tailwind",
+//     alt: "tailwind",
+//   },
+//   {
+//     image: `${images.figma}`,
+//     name: "figma",
+//     alt: "figma",
+//   },
+//   {
+//     image: `${images.illustrator}`,
+//     name: "illustrator",
+//     alt: "illustrator",
+//   },
+//   {
+//     image: `${images.photoshop}`,
+//     name: "photoshop",
+//     alt: "photoshop",
+//   },
+// ];
 
 const Tools = () => {
+  const [tools, setTools] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "tools"]';
+
+    client.fetch(query).then((data) => {
+      setTools(data);
+    });
+  }, []);
+
   return (
     <StyledTools>
       <Container>
         <ToolsTitle>Tools i work with</ToolsTitle>
         <ToolGrid>
-          {Skills.map((item, index) => (
+          {tools.map((tool, index) => (
             <Tool
               as={motion.div}
               initial={{ opacity: 0, scale: 0 }}
@@ -148,10 +159,10 @@ const Tools = () => {
                 duration: 0.7,
                 ease: "easeIn",
               }}
-              key={`item+${index}`}
+              key={`tool+${index}`}
             >
-              <img src={item.image} alt={item.alt} />
-              <span>{item.name}</span>
+              <img src={urlFor(tool.icon)} alt={tool.alt} />
+              <span>{tool.title}</span>
             </Tool>
           ))}
         </ToolGrid>
