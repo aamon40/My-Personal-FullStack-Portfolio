@@ -13,8 +13,8 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
 
     ::-webkit-scrollbar {
-        width: .7rem;
-        height: .7em;
+        width: .4rem;
+        height: .4em;
     }
 
     ::-webkit-scrollbar-track {
@@ -46,6 +46,10 @@ const GlobalStyles = createGlobalStyle`
     --light-purple: #9747ff;
     --yellow: #f3d27b;
     
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {

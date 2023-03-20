@@ -1,6 +1,6 @@
 export const fadeInLeftVar = {
   hidden: {
-    x: -100,
+    x: -20,
     opacity: 0,
   },
   visible: {
@@ -9,7 +9,7 @@ export const fadeInLeftVar = {
 
     transition: {
       type: "tween",
-      duration: 1,
+      duration: 0.5,
       staggerChildren: 0.1,
       delay: 0.7,
     },
@@ -18,7 +18,7 @@ export const fadeInLeftVar = {
 
 export const fadeInRightVar = {
   hidden: {
-    x: 100,
+    x: 20,
     opacity: 0,
   },
   visible: {
@@ -27,14 +27,14 @@ export const fadeInRightVar = {
 
     transition: {
       type: "tween",
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
 
 export const fadeInBottomVar = {
   hidden: {
-    y: 100,
+    y: 20,
     opacity: 0,
   },
   visible: {
@@ -43,14 +43,14 @@ export const fadeInBottomVar = {
 
     transition: {
       type: "tween",
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
 
 export const fadeInTopVar = {
   hidden: {
-    y: -100,
+    y: -20,
     opacity: 0,
   },
   visible: {
@@ -59,7 +59,7 @@ export const fadeInTopVar = {
 
     transition: {
       type: "tween",
-      duration: 1,
+      duration: 0.5,
     },
   },
 };

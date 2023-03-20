@@ -12,7 +12,6 @@ import {
   ProjectImage,
   ProjectLinks,
 } from "./styles/Work.styled";
-import { images } from "../constants";
 import { fadeInBottomVar, fadeInTopVar } from "./utils/Variants";
 
 const Work = () => {
