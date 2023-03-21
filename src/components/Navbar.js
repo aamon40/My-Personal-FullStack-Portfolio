@@ -29,6 +29,10 @@ const Image = styled(motion.img)`
   @media screen and (max-width: 400px) {
     width: 2.5rem;
   }
+
+  @media screen and (min-width: 1600px) {
+    width: 5rem;
+  }
 `;
 
 const NavLeft = styled.div`
@@ -56,6 +60,10 @@ const MenuItem = styled.li`
     text-transform: capitalize;
     &:hover {
       color: var(--yellow);
+    }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 1.2rem;
     }
   }
 
@@ -86,6 +94,14 @@ const Button = styled.button`
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
 
   &:hover {
     background-color: rgba(243, 210, 123, 0.15);

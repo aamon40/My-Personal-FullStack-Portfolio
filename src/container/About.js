@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import {
   AboutContent,
   AboutImg,
+  AboutText,
   Image,
   SectionTitle,
   StyledAbout,
@@ -31,7 +32,8 @@ const About = () => {
             />
           </AboutImg>
 
-          <motion.div
+          <AboutText
+            as={motion.div}
             variants={fadeInRightVar}
             initial="hidden"
             whileInView="visible"
@@ -46,7 +48,7 @@ const About = () => {
               building high quality full stack web applications that meet
               industry best standards.
             </p>
-          </motion.div>
+          </AboutText>
         </AboutContent>
       </Container>
     </StyledAbout>

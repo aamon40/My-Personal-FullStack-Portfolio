@@ -20,6 +20,10 @@ export const HeaderLeft = styled.div`
     span {
       color: var(--bluish-purple);
     }
+
+    @media screen and (min-width: 1600px) {
+      font-size: 4.5rem;
+    }
   }
 
   h3 {
@@ -40,6 +44,10 @@ export const HeaderLeft = styled.div`
     line-height: 1.5rem;
     max-width: 450px;
     margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 1600px) {
+      font-size: 1.2rem;
+    }
 
     @media screen and (max-width: 840px) {
       text-align: justify;
@@ -66,7 +74,7 @@ export const HeaderLeft = styled.div`
 
     @media screen and (max-width: 450px) {
       h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
     }
   }

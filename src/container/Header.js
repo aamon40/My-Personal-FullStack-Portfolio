@@ -7,8 +7,6 @@ import { motion } from "framer-motion";
 
 import { fadeInLeftVar } from "./utils/Variants";
 
-import { images } from "../constants";
-
 import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 
@@ -23,6 +21,10 @@ const Button = styled.button`
   background: var(--bluish-purple);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+
+  @media screen and (min-width: 1600px) {
+    font-size: 1.2rem;
+  }
 
   &:hover {
     transform: scale(1.05);

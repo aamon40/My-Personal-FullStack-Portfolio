@@ -53,8 +53,9 @@ html {
 }
 
 body {
-    background: #e7ecef;
+    background: #f1f0f0;
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 
 }
 

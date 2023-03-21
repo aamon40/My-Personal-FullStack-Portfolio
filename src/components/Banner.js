@@ -23,11 +23,11 @@ const ItemContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background: rgba(145, 105, 255, 0.15);
+  /* background: rgba(145, 105, 255, 0.15);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-  border-radius: 80px;
+  border-radius: 80px; */
   width: max-content;
-  backdrop-filter: blur(15px);
+  /* backdrop-filter: blur(15px); */
 `;
 const Item = styled.div`
   display: flex;

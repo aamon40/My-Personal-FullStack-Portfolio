@@ -5,6 +5,7 @@ export const StyledWork = styled.section`
   height: 100svh; */
   position: relative;
   background: #e7ecef;
+  padding: 100px 0;
 `;
 
 export const ProjectContainer = styled.div`
@@ -28,28 +29,7 @@ export const ProjectCard = styled.div`
   width: 100%;
   flex: none;
 `;
-export const Navigate = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* position: absolute; */
-  width: 100%;
 
-  svg {
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    font-size: 1.5rem;
-    color: var(--bluish-purple);
-    padding: 0.3rem;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 14px 2px;
-      transform: scale(0.95);
-    }
-  }
-`;
 export const ProjectImage = styled.div`
   display: flex;
   align-items: center;
@@ -65,7 +45,7 @@ export const ProjectImage = styled.div`
   }
 
   img {
-    max-width: 720px;
+    max-width: 60%;
   }
 
   @media screen and (max-width: 600px) {
@@ -75,7 +55,7 @@ export const ProjectImage = styled.div`
   }
   @media screen and (max-width: 400px) {
     img {
-      max-width: 280px;
+      max-width: 240px;
     }
   }
 `;
@@ -111,7 +91,7 @@ export const ProjectLinks = styled.div`
     background: rgba(58, 12, 163, 0.39);
     border-radius: 15px;
     padding: 0.5rem;
-    margin: 0 0.5rem;
+    margin: 0px 0.5rem 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
 

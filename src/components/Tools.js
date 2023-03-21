@@ -31,14 +31,23 @@ const StyledTools = styled.div`
 const ToolGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(3, 1fr); */
-  grid-column-gap: 48px;
-  grid-row-gap: 48px;
+  grid-column-gap: 64px;
+  grid-row-gap: 64px;
   justify-items: center;
   padding: 5rem 0;
 
+  @media screen and (max-width: 500px) {
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+  }
   @media screen and (max-width: 400px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 72px;
+    grid-row-gap: 72px;
   }
 `;
 const Tool = styled.div`
@@ -47,12 +56,17 @@ const Tool = styled.div`
   align-items: center;
   color: #fff;
   text-transform: capitalize;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: #fff;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  @media screen and (min-width: 1280px) {
+    width: 56px;
+    height: 56px;
+  }
   &:hover {
     transform: translateY(-5px);
     box-shadow: rgba(255, 210, 67, 0.4) 0px 0px 8px 4px;
@@ -69,69 +83,6 @@ const Tool = styled.div`
     font-size: 0.8125rem;
   }
 `;
-
-// const Skills = [
-//   {
-//     image: `${images.html}`,
-//     name: "html",
-//     alt: "html",
-//   },
-//   {
-//     image: `${images.sass}`,
-//     name: "sass",
-//     alt: "sass",
-//   },
-//   {
-//     image: `${images.javascript}`,
-//     name: "javascript",
-//     alt: "javascript",
-//   },
-//   {
-//     image: `${images.react}`,
-//     name: "react",
-//     alt: "react",
-//   },
-//   {
-//     image: `${images.styled}`,
-//     name: "styled",
-//     alt: "styled",
-//   },
-//   {
-//     image: `${images.git}`,
-//     name: "git",
-//     alt: "git",
-//   },
-//   {
-//     image: `${images.postgre}`,
-//     name: "postgreSQL",
-//     alt: "postgreSQL",
-//   },
-//   {
-//     image: `${images.node}`,
-//     name: "nodeJS",
-//     alt: "node",
-//   },
-//   {
-//     image: `${images.tailwind}`,
-//     name: "tailwind",
-//     alt: "tailwind",
-//   },
-//   {
-//     image: `${images.figma}`,
-//     name: "figma",
-//     alt: "figma",
-//   },
-//   {
-//     image: `${images.illustrator}`,
-//     name: "illustrator",
-//     alt: "illustrator",
-//   },
-//   {
-//     image: `${images.photoshop}`,
-//     name: "photoshop",
-//     alt: "photoshop",
-//   },
-// ];
 
 const Tools = () => {
   const [tools, setTools] = useState([]);

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FooterSocials from "../components/FooterSocials";
+import { Container } from "./styles/Container.styled";
 
 const FooterDiv = styled.div`
   display: flex;
@@ -8,11 +9,16 @@ const FooterDiv = styled.div`
   align-items: center;
   justify-content: center;
   font-family: "Anonymous Pro", monospace;
-  background: #110e18;
+
+  padding: 2rem 0;
+  background: transparent;
   color: var(--light-purple);
-  font-size: 0.6rem;
   transition: all ease 0.3s;
 
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
   a {
     color: var(--light-purple);
     &:hover {
@@ -23,16 +29,20 @@ const FooterDiv = styled.div`
 
 const Footer = () => {
   return (
-    <FooterDiv>
-      <FooterSocials />
+    <Container>
+      <FooterDiv>
+        <FooterSocials />
 
-      <p>
-        Designed & built by Nyore Achoja |{" "}
-        <span>
-          <a href="#">View Code</a>
-        </span>
-      </p>
-    </FooterDiv>
+        <p>
+          Designed & built by Nyore Achoja |{" "}
+          <span>
+            <a href="https://github.com/aamon40/My-Personal-FullStack-Portfolio">
+              View Code
+            </a>
+          </span>
+        </p>
+      </FooterDiv>
+    </Container>
   );
 };
 

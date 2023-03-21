@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   /* width: 100%; */
   padding: 0.5rem 8rem;
+  @media screen and (min-width: 1600px) {
+    padding: 0.5rem 12rem;
+  }
   @media screen and (max-width: 900px) {
     padding: 0.5rem 4rem;
   }

@@ -52,6 +52,36 @@ export const AboutContent = styled.div`
     margin: 7.5rem 0 4rem;
   }
 
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+  }
+`;
+
+export const AboutImg = styled.div`
+  max-width: 45%;
+
+  @media screen and (max-width: 780px) {
+    max-width: max-content;
+  }
+`;
+
+export const Image = styled(motion.img)`
+  max-width: 320px;
+  box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.6);
+  transform: matrix(-0.99, -0.11, -0.11, 0.99, 0, 0);
+
+  @media screen and (max-width: 780px) {
+    max-width: 280px;
+  }
+`;
+
+export const AboutText = styled.div`
+  max-width: 55%;
+
+  @media screen and (max-width: 780px) {
+    max-width: max-content;
+  }
+
   p {
     font-size: clamp(1rem, 1.2vw, 1.2rem);
     font-weight: 500;
@@ -60,18 +90,4 @@ export const AboutContent = styled.div`
     letter-spacing: 0.1em;
     color: #fff;
   }
-
-  @media screen and (max-width: 780px) {
-    flex-direction: column;
-  }
-`;
-
-export const AboutImg = styled.div`
-  /* max-width: 450px; */
-`;
-
-export const Image = styled(motion.img)`
-  width: 280px;
-  box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.6);
-  transform: matrix(-0.99, -0.11, -0.11, 0.99, 0, 0);
 `;
