@@ -7,7 +7,6 @@ import GlobalStyles from "./container/styles/Global";
 import About from "./container/About";
 import Services from "./components/Services";
 import Tools from "./components/Tools";
-import Work from "./container/Work";
 import Contact from "./container/Contact";
 import Socials from "./components/Socials";
 import NavDots from "./components/NavDots";
