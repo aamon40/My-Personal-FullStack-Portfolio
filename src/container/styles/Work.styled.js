@@ -19,9 +19,9 @@ export const ProjectContainer = styled.div`
 export const ProjectCard = styled.div`
   padding: 0 1rem;
   transition: all 0.2s ease;
+
   &:hover {
     background: rgba(0, 0, 0, 0.02);
-    /* backdrop-filter: blur(2px); */
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 14px 2px;
   }
