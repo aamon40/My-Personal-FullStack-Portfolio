@@ -1,14 +1,7 @@
 import styled from "styled-components";
-import { images } from "../../constants";
 import { motion } from "framer-motion";
 
 export const StyledAbout = styled.section`
-  /* height: 100vh;
-  height: 100svh; */
-  /* background-image: url(${images.aboutbg});
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat; */
   position: relative;
 `;
 
@@ -23,6 +16,8 @@ export const SectionTitle = styled.h3`
   transform: translate(-50%, -50%);
   left: 50%;
   top: 12%;
+  z-index: 5;
+
   @media screen and (max-width: 400px) {
     font-size: 1rem;
   }
@@ -44,21 +39,32 @@ export const AboutContent = styled.div`
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  /* height: 100vh;
-  height: 100svh; */
+  box-shadow: inset 5px -5px 44px -4px rgba(0, 0, 0, 0.9);
+  border: 3px solid rgba(145, 105, 255, 0.65);
+  border-radius: 64px;
   margin-top: 2.5rem;
+  position: relative;
+  background: #110e18;
+  padding: 2rem;
+  overflow: hidden;
 
   @media screen and (max-width: 400px) {
     margin: 7.5rem 0 4rem;
   }
 
+  @media screen and (min-width: 1024px) {
+    padding: 4rem;
+  }
+
   @media screen and (max-width: 780px) {
     flex-direction: column;
+    gap: 2rem;
   }
 `;
 
 export const AboutImg = styled.div`
   max-width: 45%;
+  z-index: 10;
 
   @media screen and (max-width: 780px) {
     max-width: max-content;
@@ -66,25 +72,27 @@ export const AboutImg = styled.div`
 `;
 
 export const Image = styled(motion.img)`
+  width: 100%;
   max-width: 320px;
-  box-shadow: 0px 6px 1px rgba(0, 0, 0, 0.6);
-  transform: matrix(-0.99, -0.11, -0.11, 0.99, 0, 0);
+  filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.6));
+  rotate: 8deg;
 
   @media screen and (max-width: 780px) {
-    max-width: 280px;
+    max-width: 240px;
   }
 `;
 
 export const AboutText = styled.div`
   max-width: 55%;
+  z-index: 10;
 
   @media screen and (max-width: 780px) {
     max-width: max-content;
   }
 
   p {
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
-    font-weight: 500;
+    font-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    font-weight: 300;
     line-height: 1.5rem;
     text-align: justify;
     letter-spacing: 0.1em;

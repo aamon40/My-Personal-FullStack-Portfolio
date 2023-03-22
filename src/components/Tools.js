@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { images } from "../constants";
 import { Container } from "../container/styles/Container.styled";
 import { ServiceTitle } from "./Services";
 import { client, urlFor } from "../client";
+import { GlowStyled } from "../container/styles/GlowStyled";
+import { images } from "../constants";
 
 const ToolsTitle = styled(ServiceTitle)`
   color: #fff;
   top: 6%;
   font-size: 1rem;
   font-weight: 500;
+  z-index: 5;
   &::after {
     width: 36px;
     height: 2px;
@@ -18,11 +20,12 @@ const ToolsTitle = styled(ServiceTitle)`
   }
 `;
 
+export const Stars = styled.img`
+  position: absolute;
+  opacity: 0.5;
+`;
+
 const StyledTools = styled.div`
-  /* background-image: url(${images.toolsBg});
-  background-position: cover;
-  background-size: cover;
-  background-repeat: no-repeat; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,12 +36,23 @@ const ToolGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 64px;
   grid-row-gap: 64px;
+  box-shadow: inset 5px -5px 44px -4px rgba(0, 0, 0, 0.9);
+  border: 3px solid rgba(145, 105, 255, 0.65);
   justify-items: center;
-  padding: 5rem 0;
+  padding: 4rem 8rem;
+  overflow: hidden;
+  position: relative;
+  background: #110e18;
+  border-radius: 64px;
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem;
+  }
 
   @media screen and (max-width: 500px) {
     grid-column-gap: 50px;
     grid-row-gap: 50px;
+    padding: 4rem 2rem;
   }
   @media screen and (max-width: 400px) {
     grid-template-columns: repeat(3, 1fr);
@@ -62,10 +76,16 @@ const Tool = styled.div`
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10;
 
   @media screen and (min-width: 1280px) {
     width: 56px;
     height: 56px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 48px;
+    height: 48px;
   }
   &:hover {
     transform: translateY(-5px);
@@ -96,10 +116,20 @@ const Tools = () => {
   }, []);
 
   return (
-    <StyledTools>
-      <Container>
+    <Container>
+      <StyledTools>
         <ToolsTitle>Tools i work with</ToolsTitle>
         <ToolGrid>
+          <GlowStyled
+            style={{
+              left: "74%",
+              top: "56%",
+              background: "rgba(243, 210, 123, 0.2)",
+            }}
+          />
+
+          <GlowStyled style={{ left: "-10%", top: "-30%" }} />
+
           {tools.map((tool, index) => (
             <Tool
               as={motion.div}
@@ -116,9 +146,10 @@ const Tools = () => {
               <span>{tool.title}</span>
             </Tool>
           ))}
+          <Stars src={images.stars} alt="stars" />
         </ToolGrid>
-      </Container>
-    </StyledTools>
+      </StyledTools>
+    </Container>
   );
 };
 

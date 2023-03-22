@@ -42,10 +42,6 @@ const NavLeft = styled.div`
 
 const Menu = styled.ul`
   display: flex;
-
-  @media screen and (max-width: 930px) {
-    display: none;
-  }
 `;
 const MenuItem = styled.li`
   display: flex;
@@ -53,13 +49,13 @@ const MenuItem = styled.li`
   margin-right: 2rem;
 
   a {
-    color: #fff;
+    color: var(--bluish-purple);
     font-size: 0.8125rem;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
     text-transform: capitalize;
     &:hover {
-      color: var(--yellow);
+      filter: brightness(1.5);
     }
 
     @media screen and (min-width: 1600px) {
@@ -69,7 +65,7 @@ const MenuItem = styled.li`
 
   &:hover {
     div {
-      background-color: var(--yellow);
+      background: var(--light-purple);
     }
   }
 `;
@@ -84,10 +80,10 @@ const Dot = styled.div`
 `;
 
 const Button = styled.button`
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--bluish-purple);
   border-radius: 25px;
   padding: 1rem 2rem;
-  color: var(--yellow);
+  color: var(--bluish-purple);
   font-family: "Montserrat";
   font-size: 0.8125rem;
   font-weight: 600;
@@ -104,7 +100,7 @@ const Button = styled.button`
   }
 
   &:hover {
-    background-color: rgba(243, 210, 123, 0.15);
+    background-color: rgba(145, 105, 255, 0.1);
   }
 `;
 
@@ -157,7 +153,7 @@ const Navbar = () => {
             }}
           >
             {" "}
-            <a href="#contact" style={{ color: "var(--yellow)" }}>
+            <a href="#contact" style={{ color: "var(--bluish-purple)" }}>
               Get In Touch
             </a>
           </Button>

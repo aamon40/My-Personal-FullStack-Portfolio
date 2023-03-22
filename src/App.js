@@ -13,14 +13,6 @@ import NavDots from "./components/NavDots";
 import Footer from "./container/Footer";
 import Projects from "./container/Projects";
 
-const StyledBg = styled.div`
-  background-image: url(${images.newbg});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: max-content;
-`;
-
 const App = () => {
   return (
     <>
@@ -28,14 +20,12 @@ const App = () => {
       <Header />
       <Socials />
       <NavDots />
-      <StyledBg>
-        <About />
-        <Services />
-        <Tools />
-        <Projects />
-        <Contact />
-        <Footer />
-      </StyledBg>
+      <About />
+      <Services />
+      <Tools />
+      <Projects />
+      <Contact />
+      <Footer />
     </>
   );
 };
