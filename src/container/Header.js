@@ -25,7 +25,8 @@ const Button = styled.button`
   font-family: "Montserrat";
   font-size: 0.8125rem;
   font-weight: 600;
-  background: var(--bluish-purple);
+  background: linear-gradient(145deg, #22046e, #3a0ca3);
+  box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
