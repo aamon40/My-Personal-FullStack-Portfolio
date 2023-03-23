@@ -10,17 +10,19 @@ const FooterDiv = styled.div`
   justify-content: center;
   font-family: "Anonymous Pro", monospace;
 
-  padding: 2rem 0;
+  padding: 2rem 0 0;
   background: transparent;
-  color: var(--light-purple);
+  color: var(--soft-red);
   transition: all ease 0.3s;
+
+  border-top: 1px solid var(--soft-red);
 
   p {
     font-size: 0.8rem;
     text-align: center;
   }
   a {
-    color: var(--light-purple);
+    color: var(--soft-red);
     &:hover {
       text-decoration: underline;
     }

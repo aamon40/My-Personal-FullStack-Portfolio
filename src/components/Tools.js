@@ -8,7 +8,7 @@ import { client, urlFor } from "../client";
 const ToolsTitle = styled(ServiceTitle)`
   color: var(--light-purple);
   top: 6%;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   z-index: 5;
   &::after {
@@ -98,7 +98,7 @@ const Tools = () => {
   return (
     <Container>
       <StyledTools>
-        <ToolsTitle>Tools i work with</ToolsTitle>
+        <ToolsTitle>Tools i use</ToolsTitle>
         <ToolGrid>
           {tools.map((tool, index) => (
             <Tool

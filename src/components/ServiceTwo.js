@@ -77,6 +77,7 @@ const Content = styled.div`
   align-items: center;
   img {
     width: 120px;
+    filter: drop-shadow(rgba(57, 12, 163, 0.3) 0px 7px 10px);
   }
   h3 {
     font-size: 0.8rem;

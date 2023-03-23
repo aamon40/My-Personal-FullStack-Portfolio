@@ -42,6 +42,10 @@ const NavLeft = styled.div`
 
 const Menu = styled.ul`
   display: flex;
+
+  @media screen and (max-width: 400px) {
+    display: none;
+  }
 `;
 const MenuItem = styled.li`
   display: flex;

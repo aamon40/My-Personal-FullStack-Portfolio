@@ -18,8 +18,9 @@ export const SectionTitle = styled.h3`
   top: 12%;
   z-index: 5;
 
-  @media screen and (max-width: 400px) {
-    font-size: 1rem;
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    top: 6%;
   }
   &::after {
     content: "";

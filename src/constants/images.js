@@ -30,7 +30,6 @@ import rocket from "../assets/rocket.png";
 import rocketv from "../assets/rocketvec.svg";
 import newbg from "../assets/NewBG.png";
 import heromobile from "../assets/Hero-mobile.png";
-import contactmobile from "../assets/contact-photo-half.png";
 import heroimage from "../assets/hero-image.png";
 import stars from "../assets/stars.png";
 import heroback from "../assets/heroback.jpg";
@@ -66,7 +65,7 @@ export default {
   rocketv,
   newbg,
   heromobile,
-  contactmobile,
+  contact,
   heroimage,
   stars,
   heroback,

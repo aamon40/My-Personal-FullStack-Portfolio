@@ -24,10 +24,10 @@ const StyledFooterSocials = styled.ul`
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: rgba(145, 105, 255, 0.15) 0px 0px 8px 4px;
+      box-shadow: rgba(222, 34, 75, 0.227) 0px 0px 8px 4px;
     }
     a {
-      color: var(--light-purple);
+      color: var(--soft-red);
 
       svg {
         font-size: 1.2rem;
