@@ -11,7 +11,7 @@ export const ServiceTitle = styled(SectionTitle)`
   text-transform: capitalize;
   font-size: 1rem;
   position: absolute;
-  top: 4%;
+  top: 3%;
 
   &::after {
     background: var(--bluish-purple);
@@ -66,6 +66,10 @@ const Side1 = styled.div`
   box-shadow: 0px 2px 4px 0px #00000070;
 
   &:hover {
+    transform: translateY(0);
+  }
+
+  @media screen and (max-width: 768px) {
     transform: translateY(0);
   }
 `;
