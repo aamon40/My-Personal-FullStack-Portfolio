@@ -45,7 +45,7 @@ const Tool = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: var(--dark);
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
   text-transform: capitalize;
@@ -69,7 +69,7 @@ const Tool = styled.div`
   }
   &:hover {
     transform: translateY(-5px);
-    box-shadow: rgba(255, 210, 67, 0.4) 0px 0px 8px 4px;
+    box-shadow: rgba(222, 34, 75, 0.243) 0px 0px 8px 4px;
   }
 
   img {

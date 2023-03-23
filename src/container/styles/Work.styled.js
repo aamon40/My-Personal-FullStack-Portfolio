@@ -28,7 +28,7 @@ export const ProjectImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0 2rem 0;
+  padding-bottom: 2rem;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
   position: relative;
   transition: all 0.2s ease;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.section`
-  margin: 2rem 0 5rem;
+  margin-bottom: 5rem;
 `;
 
 export const HeroContent = styled.div`
