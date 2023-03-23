@@ -15,7 +15,7 @@ const StyledSocials = styled.ul`
 
   li {
     margin-bottom: 1rem;
-    background: rgba(145, 105, 255, 0.15);
+    background: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     height: 2rem;
@@ -31,7 +31,7 @@ const StyledSocials = styled.ul`
       box-shadow: rgba(145, 105, 255, 0.15) 0px 0px 8px 4px;
     }
     a {
-      color: var(--light-purple);
+      color: var(--soft-red);
 
       svg {
         font-size: 1.2rem;

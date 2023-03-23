@@ -6,10 +6,10 @@ export const StyledAbout = styled.section`
 `;
 
 export const SectionTitle = styled.h3`
-  color: #fff;
-  font-weight: 600;
+  color: var(--bluish-purple);
+  font-weight: 500;
   font-size: 1.2rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 
   position: absolute;
@@ -24,12 +24,12 @@ export const SectionTitle = styled.h3`
   &::after {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 8px;
-    background: linear-gradient(90deg, #bb652b -7.5%, #fdd143 100%);
+    width: 32px;
+    height: 5px;
+    background: var(--soft-red);
     transform: translate(-50%, -50%);
 
-    top: -15px;
+    top: -9px;
     left: 50%;
   }
 `;
@@ -39,12 +39,10 @@ export const AboutContent = styled.div`
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 5px -5px 44px -4px rgba(0, 0, 0, 0.9);
-  border: 3px solid rgba(145, 105, 255, 0.65);
+
   border-radius: 64px;
   margin-top: 2.5rem;
   position: relative;
-  background: #110e18;
   padding: 2rem;
   overflow: hidden;
 
@@ -75,7 +73,6 @@ export const Image = styled(motion.img)`
   width: 100%;
   max-width: 320px;
   filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.6));
-  rotate: 8deg;
 
   @media screen and (max-width: 780px) {
     max-width: 240px;
@@ -92,10 +89,10 @@ export const AboutText = styled.div`
 
   p {
     font-size: clamp(0.8rem, 1.2vw, 1.2rem);
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.5rem;
     text-align: justify;
     letter-spacing: 0.1em;
-    color: #fff;
+    color: var(--dark);
   }
 `;

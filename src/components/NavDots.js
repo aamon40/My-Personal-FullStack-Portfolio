@@ -13,11 +13,11 @@ const LinkDot = styled.ul`
   bottom: 10%;
   right: 2%;
   z-index: 100;
-  padding: 0.2rem;
+  /* padding: 0.2rem;
   background: rgba(145, 105, 255, 0.15);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   border-radius: 80px;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px); */
 
   /* @media screen and (max-width: 780px) {
     flex-direction: row;
@@ -28,7 +28,7 @@ const LinkDot = styled.ul`
 
   li {
     margin-bottom: 1rem;
-    background: rgba(145, 105, 255, 0.15);
+    background: #fff;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     height: 2rem;
@@ -36,7 +36,6 @@ const LinkDot = styled.ul`
     display: flex;
     justify-content: center;
     padding: 0.4rem;
-    backdrop-filter: blur(15px);
 
     transition: all 0.2s ease-in-out;
     :last-of-type {
@@ -48,7 +47,7 @@ const LinkDot = styled.ul`
     }
 
     a {
-      color: var(--light-purple);
+      color: var(--soft-red);
 
       svg {
         font-size: 1.2rem;
@@ -56,6 +55,7 @@ const LinkDot = styled.ul`
 
       &.active {
         color: #fff;
+        background: var(--soft-red);
       }
     }
   }

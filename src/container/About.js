@@ -11,7 +11,6 @@ import {
 import { Container } from "./styles/Container.styled";
 import { images } from "../constants";
 import { fadeInLeftVar, fadeInRightVar } from "./utils/Variants";
-import { GlowStyled } from "./styles/GlowStyled";
 
 const About = () => {
   return (
@@ -29,14 +28,6 @@ const About = () => {
               alt="astronaut coding on a planet"
             />
           </AboutImg>
-          <GlowStyled
-            style={{
-              left: "74%",
-              top: "56%",
-              background: "rgba(243, 210, 123, 0.2)",
-            }}
-          />
-          <GlowStyled style={{ left: "-20%", top: "-36%" }} />
           <AboutText
             as={motion.div}
             variants={fadeInRightVar}

@@ -12,6 +12,7 @@ import Socials from "./components/Socials";
 import NavDots from "./components/NavDots";
 import Footer from "./container/Footer";
 import Projects from "./container/Projects";
+import ServiceTwo from "./components/ServiceTwo";
 
 const App = () => {
   return (
@@ -21,7 +22,8 @@ const App = () => {
       <Socials />
       <NavDots />
       <About />
-      <Services />
+      {/* <Services /> */}
+      <ServiceTwo />
       <Tools />
       <Projects />
       <Contact />

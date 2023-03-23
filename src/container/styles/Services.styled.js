@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledServices = styled.div`
   position: relative;
-  background: #e7ecef;
 `;
 
 export const CardContainer = styled.div`

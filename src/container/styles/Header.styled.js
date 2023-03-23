@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.header``;
+export const MainContainer = styled.section`
+  margin: 2rem 0 5rem;
+`;
 
 export const HeroContent = styled.div`
   display: flex;
@@ -35,7 +37,7 @@ export const HeaderLeft = styled.div`
 
   h3 {
     font-family: "Anonymous Pro", monospace;
-    color: #9747ff;
+    color: var(--soft-red);
     font-weight: 400;
     font-size: clamp(1.2rem, 2vw, 2rem);
     line-height: 45px;

@@ -33,6 +33,7 @@ import heromobile from "../assets/Hero-mobile.png";
 import contactmobile from "../assets/contact-photo-half.png";
 import heroimage from "../assets/hero-image.png";
 import stars from "../assets/stars.png";
+import heroback from "../assets/heroback.jpg";
 
 export default {
   logo,
@@ -68,4 +69,5 @@ export default {
   contactmobile,
   heroimage,
   stars,
+  heroback,
 };
