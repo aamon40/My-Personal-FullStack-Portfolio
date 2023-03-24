@@ -13,6 +13,7 @@ import NavDots from "./components/NavDots";
 import Footer from "./container/Footer";
 import Projects from "./container/Projects";
 import ServiceTwo from "./components/ServiceTwo";
+import FloatingNav from "./components/FloatingNav";
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
       <GlobalStyles />
       <Header />
       <Socials />
-      <NavDots />
+      <FloatingNav />
+      {/* <NavDots /> */}
       <About />
       {/* <Services /> */}
       <ServiceTwo />
