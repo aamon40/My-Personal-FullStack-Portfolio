@@ -13,7 +13,7 @@ const FloatStyled = styled.div`
 
   width: 48px;
   height: 48px;
-  background: linear-gradient(145deg, #e2e8ecac, #ffffffac);
+  background: linear-gradient(145deg, #e2e8ecd0, #ffffffd0);
   box-shadow: rgb(0 0 0 / 52%) 0px 3px 13px 1px;
   border-radius: 50%;
   z-index: 100;
@@ -63,7 +63,7 @@ const FloatUl = styled.ul`
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
-    background: linear-gradient(145deg, #e2e8ecac, #ffffffac);
+    background: linear-gradient(145deg, #e2e8ecd0, #ffffffd0);
     box-shadow: rgb(0 0 0 / 52%) 0px 3px 13px 1px;
     border-radius: 50%;
     height: 2.5rem;
