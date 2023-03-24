@@ -12,10 +12,11 @@ const Wrapper = styled.nav`
   width: 100%;
   padding: 0.5rem 4rem;
   z-index: 100;
+  transition: 0.3s ease-in-out;
 
   &.scroll {
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   }
 
   @media screen and (max-width: 840px) {

@@ -47,10 +47,6 @@ export const AboutContent = styled.div`
   padding: 2rem;
   overflow: hidden;
 
-  @media screen and (max-width: 400px) {
-    margin: 7.5rem 0 4rem;
-  }
-
   @media screen and (min-width: 1024px) {
     padding: 4rem;
   }
