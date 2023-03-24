@@ -8,13 +8,13 @@ import { AiOutlinePhone } from "react-icons/ai";
 
 const FloatStyled = styled.div`
   position: fixed;
-  right: 40px;
-  bottom: 40px;
+  right: 2%;
+  bottom: 10%;
 
   width: 40px;
   height: 40px;
   background: linear-gradient(145deg, rgb(165, 18, 50), rgb(222, 34, 74));
-  box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+  box-shadow: rgb(0 0 0 / 52%) 0px 3px 13px 1px;
   border-radius: 50%;
   z-index: 100;
 
@@ -40,6 +40,10 @@ const FloatStyled = styled.div`
     transition: 0.3s;
     bottom: 100%;
   }
+
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
 `;
 
 const FloatUl = styled.ul`
@@ -60,8 +64,7 @@ const FloatUl = styled.ul`
     align-items: center;
     margin-bottom: 1rem;
     background: linear-gradient(145deg, rgb(165, 18, 50), rgb(222, 34, 74));
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-
+    box-shadow: rgb(0 0 0 / 52%) 0px 3px 13px 1px;
     border-radius: 50%;
     height: 2rem;
     width: 2rem;
