@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.section`
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 `;
 
 export const HeroContent = styled.div`
@@ -15,7 +15,7 @@ export const HeroContent = styled.div`
   }
 `;
 
-export const HeaderLeft = styled.div`
+export const HeroLeft = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -65,10 +65,6 @@ export const HeaderLeft = styled.div`
       text-align: center;
     }
   }
-  /* 
-  img {
-    filter: grayscale(100%) opacity(20%);
-  } */
 
   @media screen and (max-width: 840px) {
     width: 100%;
@@ -85,7 +81,7 @@ export const HeaderLeft = styled.div`
   }
 `;
 
-export const HeaderRight = styled.div`
+export const HeroRight = styled.div`
   flex: 1;
 `;
 

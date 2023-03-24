@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { images } from "../constants";
@@ -7,7 +7,16 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
   padding: 0.5rem 4rem;
+  z-index: 100;
+
+  &.scroll {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
 
   @media screen and (max-width: 840px) {
     padding: 0.5rem 2rem;
@@ -35,7 +44,7 @@ const Image = styled(motion.img)`
   }
 `;
 
-const NavLeft = styled.div`
+const NavRight = styled.div`
   display: flex;
   align-items: center;
 `;
@@ -55,11 +64,15 @@ const MenuItem = styled.li`
   a {
     color: var(--bluish-purple);
     font-size: 0.8125rem;
-    font-weight: 600;
+    font-weight: 700;
     transition: all 0.3s ease-in-out;
     text-transform: capitalize;
     &:hover {
       filter: brightness(1.5);
+    }
+
+    &.active {
+      color: var(--soft-red);
     }
 
     @media screen and (min-width: 1600px) {
@@ -86,11 +99,11 @@ const Dot = styled.div`
 const Button = styled.button`
   border: 2px solid var(--bluish-purple);
   border-radius: 25px;
-  padding: 1rem 2rem;
+  padding: 1rem;
   color: var(--bluish-purple);
   font-family: "Montserrat";
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 700;
   background: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -109,9 +122,27 @@ const Button = styled.button`
 `;
 
 const Navbar = () => {
+  const scrollBackground = () => {
+    if (window.scrollY >= 79.05) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  const [scroll, setScroll] = useState("false");
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollBackground);
+
+    return () => {
+      window.removeEventListener("scroll", scrollBackground);
+    };
+  }, [window.scrollY]);
+
   return (
     <>
-      <Wrapper>
+      <Wrapper className={scroll ? "scroll" : null}>
         <Logo>
           <Image
             as={motion.img}
@@ -126,7 +157,7 @@ const Navbar = () => {
           />
         </Logo>
 
-        <NavLeft>
+        <NavRight>
           <Menu>
             {["home", "about", "work"].map((item, index) => (
               <MenuItem
@@ -158,10 +189,10 @@ const Navbar = () => {
           >
             {" "}
             <a href="#contact" style={{ color: "var(--bluish-purple)" }}>
-              Get In Touch
+              Contact Me
             </a>
           </Button>
-        </NavLeft>
+        </NavRight>
       </Wrapper>
     </>
   );

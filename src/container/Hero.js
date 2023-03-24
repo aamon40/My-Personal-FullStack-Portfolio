@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import {
-  HeaderLeft,
-  HeaderRight,
+  HeroLeft,
+  HeroRight,
   HeroContent,
   HeroImage,
   MainContainer,
-} from "./styles/Header.styled";
+} from "./styles/Hero.styled";
 import { Container } from "./styles/Container.styled";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 import { fadeInLeftVar } from "./utils/Variants";
 
-import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import { images } from "../constants";
 
@@ -43,7 +42,7 @@ const Button = styled.button`
   }
 `;
 
-const Header = () => {
+const Hero = () => {
   const [text, count] = useTypewriter({
     words: ["<FrontEnd Developer />", "UI/UX Designer", "Generally great guy"],
     loop: true,
@@ -52,10 +51,9 @@ const Header = () => {
 
   return (
     <MainContainer id="home">
-      <Navbar />
       <Container>
         <HeroContent>
-          <HeaderLeft
+          <HeroLeft
             as={motion.div}
             variants={fadeInLeftVar}
             initial="hidden"
@@ -80,12 +78,12 @@ const Header = () => {
             {/* <div>
             <img src={images.rocket} alt="" />
           </div> */}
-          </HeaderLeft>
-          <HeaderRight>
+          </HeroLeft>
+          <HeroRight>
             <HeroImage>
               <img src={images.heroimage} alt="astronaut flying a rocket" />
             </HeroImage>
-          </HeaderRight>
+          </HeroRight>
         </HeroContent>
 
         {/* <Banner /> */}
@@ -94,4 +92,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Hero;
