@@ -15,10 +15,15 @@ export const StyledContact = styled.section`
 
 export const ContactImage = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 5;
   border-radius: 8px;
+  padding: 2rem;
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+
   margin: 4rem 0 0;
 
   position: relative;
@@ -29,5 +34,12 @@ export const ContactImage = styled.div`
     max-width: 480px;
     border-radius: 8px;
     object-fit: cover;
+  }
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--soft-red);
+    margin-top: 0.5rem;
   }
 `;

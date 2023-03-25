@@ -18,7 +18,7 @@ const FooterDiv = styled.div`
   border-top: 1px solid var(--soft-red);
 
   p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
   }
   a {

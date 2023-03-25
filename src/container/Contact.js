@@ -21,6 +21,7 @@ const Contact = () => {
             src={images.contact}
             alt="contact-photo"
           />
+          <span>Say hello, let's have a chat </span>
         </ContactImage>
       </Container>
     </StyledContact>
