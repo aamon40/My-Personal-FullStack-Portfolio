@@ -22,6 +22,12 @@ export const SectionTitle = styled.h3`
     font-size: 0.9rem;
     top: 6%;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+    top: 8%;
+  }
+
   &::after {
     content: "";
     position: absolute;

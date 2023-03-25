@@ -36,10 +36,26 @@ export const ContactImage = styled.div`
     object-fit: cover;
   }
 
-  span {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1rem;
     font-weight: 600;
     color: var(--soft-red);
     margin-top: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(80%);
+    }
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    svg {
+      rotate: 15deg;
+    }
   }
 `;

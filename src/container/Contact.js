@@ -5,6 +5,7 @@ import { ContactImage, StyledContact } from "./styles/Contact.styled";
 import { Container } from "./styles/Container.styled";
 import { images } from "../constants";
 import { fadeInRightVar } from "./utils/Variants";
+import { IoMdMail } from "react-icons/io";
 
 const Contact = () => {
   return (
@@ -21,7 +22,12 @@ const Contact = () => {
             src={images.contact}
             alt="contact-photo"
           />
-          <span>Say hello, let's have a chat </span>
+          <a href="mailto:achojanyore@gmail.com?subject=Mail from your website">
+            Say hello, let's have a chat.{" "}
+            <span>
+              <IoMdMail />
+            </span>{" "}
+          </a>
         </ContactImage>
       </Container>
     </StyledContact>

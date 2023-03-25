@@ -124,7 +124,7 @@ const Button = styled.button`
 
 const Navbar = () => {
   const scrollBackground = () => {
-    if (window.scrollY >= 79.05) {
+    if (window.scrollY >= 71.05) {
       setScroll(true);
     } else {
       setScroll(false);
