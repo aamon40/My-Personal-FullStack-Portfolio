@@ -31,7 +31,7 @@
 
 ## Preview
 
-![demo](/spacefolio/public/assets/heroback.jpg)
+![demo](public/assets/heroback.jpg)
 
 ### Built With
 
@@ -55,7 +55,7 @@
 
 ## Contact
 
-Nyore Achoja - achojanyore@gmail.com [LinkedIn](https://www.linkedin.com/in/nyore-achoja-03127211a/)
+Nyore Achoja - achojanyore@gmail.com, <br /> [LinkedIn](https://www.linkedin.com/in/nyore-achoja-03127211a/)
 
 ## Acknowledgments
 
