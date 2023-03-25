@@ -54,7 +54,6 @@ html {
 }
 
 body {
-    /* background-image: url('./assets/heroback.png'); */
     background: #fff;
     background-size: cover;
     background-repeat: no-repeat;

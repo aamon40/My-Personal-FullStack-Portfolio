@@ -34,7 +34,7 @@ const Logo = styled.div``;
 
 const Image = styled(motion.img)`
   cursor: pointer;
-  width: 4rem;
+  width: 3rem;
 
   @media screen and (max-width: 400px) {
     width: 2.5rem;
@@ -153,7 +153,7 @@ const Navbar = () => {
               duration: 0.5,
               ease: "easeIn",
             }}
-            src={images.logo}
+            src="./assets/newLogo.png"
             alt="Logo"
           />
         </Logo>

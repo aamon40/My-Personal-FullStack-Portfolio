@@ -38,7 +38,10 @@ const Footer = () => {
         <p>
           Designed & built by Nyore Achoja |{" "}
           <span>
-            <a href="https://github.com/aamon40/My-Personal-FullStack-Portfolio">
+            <a
+              href="https://github.com/aamon40/My-Personal-FullStack-Portfolio"
+              target="_blank"
+            >
               View Code
             </a>
           </span>

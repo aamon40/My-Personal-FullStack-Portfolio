@@ -47,6 +47,12 @@ export const HeroLeft = styled.div`
     }
   }
 
+  h6 {
+    color: var(--bluish-purple);
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+  }
+
   p {
     font-size: 1rem;
     font-weight: 500;

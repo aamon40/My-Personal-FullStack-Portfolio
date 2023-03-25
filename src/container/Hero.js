@@ -25,7 +25,8 @@ const Button = styled.button`
   font-size: 0.8125rem;
   font-weight: 600;
   background: linear-gradient(145deg, #22046e, #3a0ca3);
-  box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+  box-shadow: 5px 5px 15px rgba(12, 13, 13, 0.251),
+    -5px -5px 15px rgba(0, 0, 0, 0.509);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -43,8 +44,12 @@ const Button = styled.button`
 `;
 
 const Hero = () => {
-  const [text, count] = useTypewriter({
-    words: ["<FrontEnd Developer />", "UI/UX Designer", "Generally great guy"],
+  const [text] = useTypewriter({
+    words: [
+      "<FrontEnd Developer />",
+      "UI/UX Designer",
+      "Lover of music and astronomy",
+    ],
     loop: true,
     delaySpeed: 2000,
   });
@@ -59,6 +64,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="visible"
           >
+            <h6>Hello Im,</h6>
             <h1>
               Nyore <span>Achoja</span>
             </h1>
@@ -75,9 +81,6 @@ const Hero = () => {
                 See My Work
               </a>
             </Button>
-            {/* <div>
-            <img src={images.rocket} alt="" />
-          </div> */}
           </HeroLeft>
           <HeroRight>
             <HeroImage>
@@ -85,8 +88,6 @@ const Hero = () => {
             </HeroImage>
           </HeroRight>
         </HeroContent>
-
-        {/* <Banner /> */}
       </Container>
     </MainContainer>
   );

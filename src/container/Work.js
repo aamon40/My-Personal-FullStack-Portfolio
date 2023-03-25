@@ -11,11 +11,8 @@ import {
   ProjectDetails,
   ProjectImage,
   ProjectLinks,
-  Stars,
 } from "./styles/Work.styled";
 import { fadeInBottomVar, fadeInTopVar } from "./utils/Variants";
-import { GlowStyled } from "./styles/GlowStyled";
-import { images } from "../constants";
 
 const Work = () => {
   const [work, setWork] = useState([]);
