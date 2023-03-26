@@ -31,6 +31,8 @@ export const SectionTitle = styled.h3`
   &::after {
     content: "";
     position: absolute;
+    border-radius: 5px;
+
     width: 32px;
     height: 5px;
     background: var(--soft-red);
