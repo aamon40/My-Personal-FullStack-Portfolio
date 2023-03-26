@@ -93,6 +93,7 @@ export const HeroRight = styled.div`
 
 export const HeroImage = styled.div`
   img {
+    filter: drop-shadow(rgba(0, 0, 0, 0.5) 7px 7px 7px);
     width: 100%;
     min-width: 360px;
   }

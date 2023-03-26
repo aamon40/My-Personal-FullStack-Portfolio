@@ -25,8 +25,7 @@ const Button = styled.button`
   font-size: 0.8125rem;
   font-weight: 600;
   background: linear-gradient(145deg, #22046e, #3a0ca3);
-  box-shadow: 5px 5px 15px rgba(12, 13, 13, 0.251),
-    -5px -5px 15px rgba(0, 0, 0, 0.509);
+  box-shadow: rgba(0, 0, 0, 0.51) 1px 1px 7px 1px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
@@ -64,7 +63,7 @@ const Hero = () => {
             initial="hidden"
             whileInView="visible"
           >
-            <h6>Hello Im,</h6>
+            <h6>Hello I'm,</h6>
             <h1>
               Nyore <span>Achoja</span>
             </h1>

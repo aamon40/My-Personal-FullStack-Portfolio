@@ -75,8 +75,7 @@ export const AboutImg = styled.div`
 export const Image = styled(motion.img)`
   width: 100%;
   max-width: 320px;
-  filter: drop-shadow(0px 6px 1px rgba(0, 0, 0, 0.6));
-
+  filter: drop-shadow(rgba(0, 0, 0, 0.5) 7px 7px 7px);
   @media screen and (max-width: 780px) {
     max-width: 240px;
   }
