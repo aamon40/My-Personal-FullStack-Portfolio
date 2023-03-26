@@ -1,10 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import { images } from "./constants";
 
 import GlobalStyles from "./container/styles/Global";
 import About from "./container/About";
-import Services from "./components/Services";
 import Tools from "./components/Tools";
 import Contact from "./container/Contact";
 import Socials from "./components/Socials";
@@ -23,9 +20,7 @@ const App = () => {
       <Hero />
       <Socials />
       <FloatingNav />
-      {/* <NavDots /> */}
       <About />
-      {/* <Services /> */}
       <ServiceTwo />
       <Tools />
       <Projects />

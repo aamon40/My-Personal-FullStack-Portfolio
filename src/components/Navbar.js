@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { images } from "../constants";
 
 const Wrapper = styled.nav`
   display: flex;
@@ -139,7 +138,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", scrollBackground);
     };
-  }, [window.scrollY]);
+  }, []);
 
   return (
     <>

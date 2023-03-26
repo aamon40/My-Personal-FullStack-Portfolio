@@ -65,7 +65,6 @@ export default {
   rocketv,
   newbg,
   heromobile,
-  contact,
   heroimage,
   stars,
   heroback,

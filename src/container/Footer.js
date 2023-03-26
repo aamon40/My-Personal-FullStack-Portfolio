@@ -41,6 +41,7 @@ const Footer = () => {
             <a
               href="https://github.com/aamon40/My-Personal-FullStack-Portfolio"
               target="_blank"
+              rel="noreferrer"
             >
               View Code
             </a>

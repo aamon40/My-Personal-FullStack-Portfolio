@@ -8,10 +8,8 @@ export const fadeInLeftVar = {
     opacity: 1,
 
     transition: {
-      type: "tween",
       duration: 0.5,
       staggerChildren: 0.1,
-      delay: 0.7,
     },
   },
 };

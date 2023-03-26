@@ -31,7 +31,7 @@ export const ContactImage = styled.div`
 
   img {
     width: 100%;
-    max-width: 480px;
+    max-width: 640px;
     border-radius: 8px;
     object-fit: cover;
   }
