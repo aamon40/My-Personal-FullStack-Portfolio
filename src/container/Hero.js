@@ -11,9 +11,8 @@ import { Container } from "./styles/Container.styled";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
-import { fadeInLeftVar } from "./utils/Variants";
+import { fadeInLeftVar, fadeInRightVar } from "./utils/Variants";
 
-import Banner from "../components/Banner";
 import { images } from "../constants";
 
 const Button = styled.button`
@@ -61,7 +60,8 @@ const Hero = () => {
             as={motion.div}
             variants={fadeInLeftVar}
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
+            transition={{}}
           >
             <h6>Hello I'm,</h6>
             <h1>
@@ -82,7 +82,12 @@ const Hero = () => {
             </Button>
           </HeroLeft>
           <HeroRight>
-            <HeroImage>
+            <HeroImage
+              as={motion.div}
+              variants={fadeInRightVar}
+              initial="hidden"
+              animate="visible"
+            >
               <img src={images.heroimage} alt="astronaut flying a rocket" />
             </HeroImage>
           </HeroRight>
