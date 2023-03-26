@@ -20,7 +20,7 @@ export const ContactImage = styled.div`
   align-items: center;
   z-index: 5;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1rem;
   background: linear-gradient(145deg, #e2e8ec, #ffffff);
   box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
 
