@@ -31,7 +31,7 @@
 
 ## Preview
 
-![demo](public/assets/portfolio_hero_screenshot.png)
+![demo](public/assets/My_Portfolio_Mockup.png)
 
 ### Built With
 
