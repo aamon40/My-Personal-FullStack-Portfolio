@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { BiBrain } from "react-icons/bi";
 import { BsGear } from "react-icons/bs";

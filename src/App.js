@@ -1,5 +1,3 @@
-import React from "react";
-
 import GlobalStyles from "./container/styles/Global";
 import About from "./container/About";
 import Tools from "./components/Tools";

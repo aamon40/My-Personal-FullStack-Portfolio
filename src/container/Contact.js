@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { SectionTitle } from "./styles/About.styled";
 import { ContactImage, StyledContact } from "./styles/Contact.styled";

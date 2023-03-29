@@ -1,4 +1,3 @@
-import React from "react";
 import { images } from "../constants";
 import styled from "styled-components";
 import { SectionTitle } from "../container/styles/About.styled";

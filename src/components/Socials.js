@@ -1,4 +1,3 @@
-import React from "react";
 import { FiGithub } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
 import { FiDribbble } from "react-icons/fi";

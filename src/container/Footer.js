@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import FooterSocials from "../components/FooterSocials";
 import { Container } from "./styles/Container.styled";
