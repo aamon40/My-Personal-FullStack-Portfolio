@@ -34,14 +34,12 @@ const About = () => {
             whileInView="visible"
           >
             <p>
-              Hello! My name is Nyore and I enjoy creating beautifully crafted
-              web experiences. My foray into software development started with a
-              Python course in University where I learned the basics of
-              programming. From that moment on, I got hooked and used every
-              resource I could lay my hands on to improve my IT and programming
-              skills. My current focus is on continually learning and and
-              building high quality full stack web applications that meet
-              industry best standards.
+              Hello! I am Nyore and I enjoy creating beautiful, accessible and
+              fun web experiences. I am always looking to stay up to date with
+              the latest technologies. My current focus is on continually
+              learning and and building high quality full stack web applications
+              that meet industry best standards. You can find me watching old
+              movies and reading when I am not coding.
             </p>
           </AboutText>
         </AboutContent>
