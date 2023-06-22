@@ -1,6 +1,4 @@
-import { FiGithub } from "react-icons/fi";
-import { FiLinkedin } from "react-icons/fi";
-import { FiDribbble } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { ImWhatsapp } from "react-icons/im";
 import styled from "styled-components";
 
@@ -57,15 +55,6 @@ const Socials = () => {
           rel="noreferrer"
         >
           <FiLinkedin />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://dribbble.com/aamonthedon"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FiDribbble />
         </a>
       </li>
       <li>

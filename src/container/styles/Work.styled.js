@@ -7,10 +7,19 @@ export const StyledWork = styled.section`
 
 export const ProjectContainer = styled.div`
   display: flex;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 2.5rem;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: var(--soft-red);
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--soft-red);
+  }
 `;
 
 export const ProjectCard = styled.div`
@@ -28,6 +37,7 @@ export const ProjectImage = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding-bottom: 2rem;
   filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
   position: relative;
@@ -82,6 +92,13 @@ export const ProjectLinks = styled.div`
   align-items: center;
   justify-content: center;
 
+  a {
+    color: var(--soft-red);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
   svg {
     color: #fff;
     background: linear-gradient(145deg, #a51232, #de224a);
@@ -89,7 +106,7 @@ export const ProjectLinks = styled.div`
     box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
     border-radius: 15px;
     padding: 0.5rem;
-    margin: 0px 0.5rem 1rem;
+    margin: 0px 0.5rem 0rem;
     cursor: pointer;
     font-size: 34px;
     transition: all 0.2s ease;

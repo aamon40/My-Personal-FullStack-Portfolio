@@ -17,5 +17,19 @@ export default {
         hotspot: true,
       },
     },
+
+    {
+      name: 'mySortOrder',
+      title: 'My Sort Order',
+      type: 'number',
+    },
+  ],
+
+  orderings: [
+    {
+      title: 'My Sort Order',
+      name: 'mySortOrderDesc',
+      by: [{field: 'mySortOrder', direction: 'desc'}],
+    },
   ],
 }

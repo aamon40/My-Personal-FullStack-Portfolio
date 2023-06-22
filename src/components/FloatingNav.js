@@ -114,12 +114,7 @@ const FloatingNav = () => {
       <FloatUl>
         {IconList.map((item, index) => (
           <li>
-            <a
-              key={`item-${index}`}
-              href={`#${item.name}`}
-              //   onClick={() => setActiveNav(`#${item.name}`)}
-              //   className={activeNav === `#${item.name}` ? "active" : ""}
-            >
+            <a key={`item-${index}`} href={`#${item.name}`}>
               {item.icon}
             </a>
           </li>

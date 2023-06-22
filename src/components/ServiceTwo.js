@@ -126,13 +126,6 @@ const ServiceContent = [
       "I believe that design is not just about aesthetics but also about functionality, and my goal is to create designs that are both beautiful and user-friendly",
     alt: "Design image",
   },
-  {
-    img: `${images.branding}`,
-    title: "Logo & Branding",
-    details:
-      "I create unique and powerful brand identities that connect with your target audience and make a lasting impact.",
-    alt: "Branding image",
-  },
 ];
 
 const ServiceTwo = () => {
