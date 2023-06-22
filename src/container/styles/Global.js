@@ -44,7 +44,7 @@ const GlobalStyles = createGlobalStyle`
     --light-purple: #9169FF;
     --yellow: #f3d27b;
     --soft-red: #DE224A;
-    
+    --swiper-navigation-size: 30px;
 }
 
 html {
